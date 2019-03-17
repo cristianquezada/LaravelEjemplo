@@ -19,6 +19,12 @@ GET,POST,PUT,DELETE,RESOURCE
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix'=>'admin'],function(){
+
+Route::resource('users','UserController');
+});
+
 /*
  Route::get('articulos/{nombre?}',function($nombre="No hay nombre"){
 
@@ -27,8 +33,10 @@ echo "El nombre que colocaste es:".$nombre;
 
  */
 
-
+/*
  Route::group(['prefix'=>'articulos'],function(){
 
 Route::get('view/{id}',['uses'=>'TestController@view','as'=>'articulosView']);
  });
+*/
+
