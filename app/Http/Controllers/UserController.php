@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UserController extends Controller
 {
@@ -36,7 +37,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       //crear variable que recibe los datos del formulario de la vista create
+
+
+$user=new User($request->all());
+
+$user->password=bcrypt($request->password);
+$user->save();
+dd('Usuario creado');
+
+
     }
 
     /**
