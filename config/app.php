@@ -182,6 +182,7 @@ Provider personales
 */
 Collective\Html\HtmlServiceProvider::class,
 Cviebrock\EloquentSluggable\ServiceProvider::class,
+Laracasts\Flash\FlashServiceProvider::class,
     ],
 
     /*
@@ -236,6 +237,7 @@ Aliases personales
 */
 'Form'=>Collective\Html\FormFacade::class,
 'Html'=>Collective\Html\HtmlFacade::class,
+'Flash'=>Laracasts\Flash\Flash::class,
     ],
 
 ];
