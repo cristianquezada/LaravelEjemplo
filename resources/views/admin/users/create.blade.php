@@ -6,6 +6,10 @@
 @section('titulo','Crear Usuario')
 
 @section('content')
+
+
+
+
 <!-- Hacer formulario-->
 {!! Form::open(['route'=>'users.store','method'=>'POST']) !!}
 
