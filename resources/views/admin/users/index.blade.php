@@ -31,7 +31,10 @@
 
 @endif
 				</td>
-				<td><a href="" class="btn btn-danger"></a><a href="" class="btn btn-warning"></a></td>
+				<td>
+					<a href="{{ route('users.edit',$user->id)}}" class="btn btn-warning" >Editar</a>
+				<a href="{{ route('admin.users.destroy',$user->id)}}" class="btn btn-danger" onclick="return confirm('¿Seguro que desea eliminar a ese usuario?')" >Eliminar</a> 
+				</td>
 				</tr>
 		@endforeach
 	</tbody>
